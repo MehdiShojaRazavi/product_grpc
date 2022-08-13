@@ -6,7 +6,7 @@ message Product{
   string price = 3;
 }
 message ProductList{
-  repeated product products = 1;
+  repeated Product products = 1;
 }
 message ProductId{
   int32 id = 1;
