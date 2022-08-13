@@ -1,0 +1,7 @@
+{
+  "name": "Product - gRPC - dev",
+  "db": {
+    "address": "mongodb://localhost:27017/Product-gRPC"
+  },
+  "port": "3001"
+}

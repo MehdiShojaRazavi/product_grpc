@@ -1,0 +1,7 @@
+{
+  "name": "Product - gRPC - production",
+  "db": {
+    "address": ""
+  },
+  "port": ""
+}
