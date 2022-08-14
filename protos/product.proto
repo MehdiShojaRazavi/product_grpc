@@ -20,7 +20,7 @@ message Result{
   string status = 1;
 }
 service ProductService{
-  rpc listOfProducts (Empty) returns (ProductList);
+  rpc listProduct (Empty) returns (ProductList);
   rpc getProduct (ProductId) returns (Product);
   rpc createProduct (NewProduct) returns (Result);
   rpc updateProduct (Product) returns (Result);
