@@ -11,6 +11,7 @@ const productClient = new productPackage.ProductService(productServiceURL, grpc.
 
 function listProduct(req, res, next) {
   try{
+    console.log('is running: listProduct(req, res, next)');
     productClient.listProduct(null, (err, data) => {
       if (err) throw createError.InternalServerError();
       res.status(HttpStatus.OK).json({
@@ -20,11 +21,31 @@ function listProduct(req, res, next) {
         }
       })
     })
-  }catch(error) {
+  } catch(error) {
     next(error);
   };
 };
+function getProduct(req, res, next) {
+  try{
+    console.log('is running: getProduct(req, res, next)');
+    const {id} = req.params;
+    console.log(id);
+    productClient.getProduct({id}, (err, data) => {
+      if (err) throw createError.InternalServerError();
+      res.status(HttpStatus.OK).json({
+        statusCode: HttpStatus.OK,
+        data : {
+          data
+        }
+      })
+    })
+  } catch(error){
+    next(error);
+  }
+
+}
 
 module.exports = {
-  listProduct
+  listProduct,
+  getProduct
 }
