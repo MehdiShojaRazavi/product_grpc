@@ -44,3 +44,27 @@
  *        500:
  *          description: Internal Server Error
  */
+
+/**
+ * @swagger
+ *  /product/delete/{id}:
+ *    delete:
+ *      tags: [admin-panel]
+ *      summary: delete product by id
+ *      description: delete product by id
+ *      parameters:
+ *        -  in: path
+ *           name: id
+ *           type: string
+ *           description: Enter id
+ *           example: 4
+ *      responses:
+ *        201:
+ *          description: success
+ *        400:
+ *          description: data not found
+ *        404:
+ *          description: route not found
+ *        500:
+ *          description: Internal Server Error
+ */
